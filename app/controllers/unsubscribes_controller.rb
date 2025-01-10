@@ -1,7 +1,7 @@
 class UnsubscribesController < ApplicationController
     allow_unauthenticated_access
     before_action :set_subscriber
-    resource :unsubscribe, only: [ :show ]
+    resources :unsubscribe, only: [ :show ]
 
     def show
       @subscriber&.destroy
